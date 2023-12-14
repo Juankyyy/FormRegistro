@@ -71,6 +71,16 @@ btn.addEventListener("click", () => {
             }
         })
 
+        if (grupo == "Jobs") {
+            infoRow.style = "background-color: #ff4242"
+        } else if (grupo == "Ritchie") {
+            infoRow.style = "background-color: #00a7d1"
+        }  else if (grupo == "Lovelace") {
+            infoRow.style = "background-color: #790097"
+        }  else if (grupo == "Tesla") {
+            infoRow.style = "background-color: #439600"
+        }
+
         table.appendChild(infoRow);
         titulosRow.classList.remove("hidden");
     
