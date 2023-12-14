@@ -18,17 +18,17 @@
         <div class="inputs">
             <div class="content-input">
                 <label>Nombre: </label>
-                <input class="input" type="text" id="name" autofocus>
+                <input class="input" type="text" id="name" autofocus maxlength="15">
             </div>
 
             <div class="content-input">
                 <label>Apellido: </label>
-                <input class="input" type="text" id="lastName">
+                <input class="input" type="text" id="lastName" maxlength="15">
             </div>
 
             <div class="content-input">
                 <label>Edad: </label>
-                <input class="input" type="number" id="age">
+                <input class="input" type="number" id="age" oninput="maxlength(this, 3)">
             </div>
 
             <div class="content-input">

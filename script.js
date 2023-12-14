@@ -10,7 +10,7 @@ const table = document.createElement("table");
 table.setAttribute("border", "1")
 divTable.appendChild(table);
 
-const titulos = ["Nombre", "Apellido", "Edad", "Grupo", ""];
+const titulos = ["Nombre", "Apellido", "Edad", "Grupo Etario", "Grupo", ""];
 const titulosRow = document.createElement("tr");
 titulosRow.classList.add("hidden");
 
@@ -39,7 +39,24 @@ btn.addEventListener("click", () => {
     btnEditar.append("Editar");
     
     if (nombre != "" && apellido != "" && edad != null && grupo != "Elegir grupo" && grupo != "") {
-        const info = [nombre, apellido, edad, grupo, btnEditar, btnEliminar];
+        
+        if (edad >= 0 && edad <= 5) {
+            grupoEtario = "Bebé";
+        } else if (edad >= 6 && edad <= 11) {
+            grupoEtario = "Niñx";
+        } else if (edad >= 12 && edad <= 18) {
+            grupoEtario = "Adolescente";
+        } else if (edad >= 19 && edad <= 26) {
+            grupoEtario = "Joven";
+        } else if (edad >= 27 && edad <= 59) {
+            grupoEtario = "Adulto";
+        } else if (edad >= 60 && edad <= 115) {
+            grupoEtario = "Adulto Mayor";
+        } else {
+            grupoEtario = "No válido"
+        };
+        
+        const info = [nombre, apellido, edad, grupoEtario, grupo, btnEditar, btnEliminar];
         const infoRow = document.createElement("tr");
 
         info.forEach((infoText) => {
@@ -97,3 +114,9 @@ function clearInputs() {
         }
     })
 };
+
+function maxlength(element, max) {
+    if (element.value.length > max) {
+        element.value = element.value.slice(0, max);
+    }
+}
