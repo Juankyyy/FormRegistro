@@ -72,7 +72,7 @@ btn.addEventListener("click", () => {
         })
 
         if (grupo == "Jobs") {
-            infoRow.style = "background-color: #ff4242"
+            infoRow.style = "background-color: #c93232"
         } else if (grupo == "Ritchie") {
             infoRow.style = "background-color: #00a7d1"
         }  else if (grupo == "Lovelace") {
