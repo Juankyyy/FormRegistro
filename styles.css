@@ -13,9 +13,14 @@ input[type=number] { -moz-appearance:textfield; }
     font-family: 'Rethink Sans', sans-serif;
 }
 
+html {
+    background-color: #222;
+    color: #fff;
+}
+
 table {
     border-collapse: collapse;
-    border: 3px solid #000;
+    border: 2px solid #d1d1d1;
 }
 
 td, th {
@@ -58,29 +63,32 @@ select {
 
 .input {
     font-size: 16px;
-    border: solid #d1d1d1;
+    background-color: #222;
+    border: solid #4e4e4e;
+    color: #fff;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 20vw;
-    transition: all 0.3s;
     max-width: 200px;
+    transition: all 0.3s;
 }
 
 .input:hover {
-    box-shadow: 0px 2px 3px #000;
+    box-shadow: 0px 0px 10px #4e4e4e;
+    background-color: #4e4e4e;
 }
 
 .input:focus {
+    background-color: #4e4e4e;
     outline: none;
-    background-color: #d1d1d1;
-    box-shadow: 0px 0px 5px #000;
 }
 
 .btnInicio {
     margin-top: 10px;
     font-size: 20px;
     padding: 5px 15px;
-    background-color: #cacaca;
+    background-color: #4e4e4e;
+    color: #fff;
     cursor: pointer;
     border-radius: 9px;
     transition: all 0.3s;
@@ -90,7 +98,6 @@ select {
     color: #fff;
     background-color: #0066ff;
     box-shadow: 0px 1px 10px #0066ff;
-    font-weight: bold;
 }
 
 #group {
@@ -98,18 +105,20 @@ select {
     padding: 5px 10px;
     background-color: #fff;
     border: none;
-    border: 1px solid #222;
+    color: #fff;
+    background-color: #4e4e4e;
     border-radius: 7px;
     transition: all 0.3s;
 }
 
 #group:hover {
-    box-shadow: 0px 1px 5px #222;
+    box-shadow: 0px 0px 10px #4e4e4e;
 }
 
 .btnEdit, .btnDelete {
     border: none;
-    background-color: #d9d9d9;
+    background-color: #4e4e4e;
+    color: #fff;
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 6px;
@@ -118,10 +127,10 @@ select {
 
 .btnEdit:hover {
     background-color: #0066ff;
-    color: #fff;
+    box-shadow: 0px 0px 10px #0066ff;
 }
 
 .btnDelete:hover {
     background-color: #ff3131;
-    color: #fff;
+    box-shadow: 0px 0px 10px #ff3131;
 }
