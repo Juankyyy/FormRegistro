@@ -24,6 +24,7 @@ table {
 }
 
 td, th {
+    position: relative;
     text-align: center;
     padding: 10px;
 }
@@ -124,13 +125,20 @@ select {
 }
 
 .btnEdit, .btnDelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     background-color: #4e4e4e;
     color: #fff;
     cursor: pointer;
-    padding: 5px 10px;
     border-radius: 6px;
     transition: all 0.3s;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .btnEdit:hover {
