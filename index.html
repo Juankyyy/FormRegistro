@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/gJQnjNVc/favicon.png" type="image/x-icon">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <div class="content">
+        <div class="title">
+            <h1>Formulario</h1>    
+        </div>
+
+        <div class="inputs">
+            <div class="content-input">
+                <label>Nombre: </label>
+                <input class="input" type="text" id="name" autofocus>
+            </div>
+
+            <div class="content-input">
+                <label>Apellido: </label>
+                <input class="input" type="text" id="lastName">
+            </div>
+
+            <div class="content-input">
+                <label>Edad: </label>
+                <input class="input" type="number" id="age">
+            </div>
+
+            <div class="content-input">
+                <label>Grupo: </label>
+                <select name="group" id="group">
+                    <option disabled selected>Elegir grupo</option>
+                    <option value="Jobs">Jobs</option>
+                    <option value="Ritchie">Ritchie</option>
+                    <option value="Lovelace">Lovelace</option>
+                    <option value="Tesla">Tesla</option>
+                </select>
+            </div>
+
+            <div class="btnInicio">
+                <p>Agregar</p>
+            </div>
+        </div>
+
+        <div id="divTable"></div>
+    </div>
+</body>
+</html>
