@@ -18,6 +18,12 @@ html {
     color: #fff;
 }
 
+#body-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 table {
     border-collapse: collapse;
     border: 2px solid #d1d1d1;
@@ -72,6 +78,10 @@ select {
     width: 20vw;
     max-width: 200px;
     transition: all 0.3s;
+}
+
+.inputChiquito {
+    max-width: 130px;
 }
 
 .input:hover {

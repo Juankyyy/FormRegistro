@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="https://i.postimg.cc/g2d6Xsty/Classroom.png" type="image/x-icon">
     <title>Classroom</title>
 </head>
-<body>
+<body id="body-flex">
 
     <div class="content">
         <div class="title">
@@ -18,32 +18,32 @@
         <div class="inputs">
             <div class="content-input">
                 <label>Nombre: </label>
-                <input class="input" type="text" id="name" autofocus maxlength="15">
+                <input class="input inputChiquito" type="text" id="name" autofocus maxlength="15">
             </div>
 
             <div class="content-input">
                 <label>Apellido: </label>
-                <input class="input" type="text" id="lastName" maxlength="15">
+                <input class="input inputChiquito" type="text" id="lastName" maxlength="15">
             </div>
 
             <div class="content-input">
                 <label>Desarrollo: </label>
-                <input class="input" type="number" id="desarrollo" step="0.1" min="1" max="5" oninput="maxlength(this, 3)">
+                <input class="input inputChiquito" type="number" id="desarrollo" step="0.1" min="1" max="5" oninput="maxlength(this, 3)">
             </div>
 
             <div class="content-input">
                 <label>Inglés: </label>
-                <input class="input" type="number" id="ingles" step="0.1" min="1" max="5" oninput="maxlength(this, 3)">
+                <input class="input inputChiquito" type="number" id="ingles" step="0.1" min="1" max="5" oninput="maxlength(this, 3)">
             </div>
 
             <div class="content-input">
                 <label>Habilidades: </label>
-                <input class="input" type="number" id="habilidades" step="0.1" min="1" max="5" oninput="maxlength(this, 3)">
+                <input class="input inputChiquito" type="number" id="habilidades" step="0.1" min="1" max="5" oninput="maxlength(this, 3)">
             </div>
 
             <div class="content-input">
                 <label>Review: </label>
-                <input class="input" type="number" id="review" step="0.1" min="1" max="5" oninput="maxlength(this, 3)">
+                <input class="input inputChiquito" type="number" id="review" step="0.1" min="1" max="5" oninput="maxlength(this, 3)">
             </div>
 
             <div class="btnInicio">
@@ -51,13 +51,14 @@
             </div>
         </div>
 
-        <div id="divTable"></div>
-
+        
         <div id="form" class="btnPage">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20"><path fill="#ffffff" d="M1 1h18v12l-6 6H1V1zm3 3v1h12V4H4zm0 4v1h12V8H4zm6 5v-1H4v1h6zm2 4l5-5h-5v5z"/></svg>
         </div>
-
+        
         <div id="notes"></div>
     </div>
+
+    <div id="divTable"></div>
 </body>
 </html>
