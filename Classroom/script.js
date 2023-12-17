@@ -28,11 +28,6 @@ table.appendChild(titulosRow);
 
 
 btn.addEventListener("click", () => {
-    document.querySelector("body").classList.add("body-flex");
-    inputs.forEach((input) => {
-        input.classList.add("inputChiquito")
-    })
-
     const nombre = names.value;
     const apellido = lastName.value;
 
@@ -53,7 +48,10 @@ btn.addEventListener("click", () => {
 
     if (nombre != "" && apellido != "" && desarrollo != "" && ingles != "" && habilidades != "" && review != "") {
         if (desarrollo <= 5 && desarrollo >= 0 && ingles <= 5 && ingles >= 0 && habilidades <= 5 && habilidades >= 0 && review <= 5 && review >= 0) {
-            
+        document.querySelector("body").classList.add("body-flex");
+        inputs.forEach((input) => {
+            input.classList.add("inputChiquito")
+        })
             
             const notas = [desarrollo, ingles, habilidades, review]
             let suma = 0;
