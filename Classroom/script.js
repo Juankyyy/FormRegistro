@@ -6,6 +6,7 @@ const english = document.querySelector("#ingles");
 const skills = document.querySelector("#habilidades");
 const reviewEn = document.querySelector("#review");
 
+const inputs = document.querySelectorAll(".input")
 const btn = document.querySelector(".btnInicio");
 
 const divTable = document.querySelector("#divTable");
@@ -27,6 +28,11 @@ table.appendChild(titulosRow);
 
 
 btn.addEventListener("click", () => {
+    document.querySelector("body").classList.add("body-flex");
+    inputs.forEach((input) => {
+        input.classList.add("inputChiquito")
+    })
+
     const nombre = names.value;
     const apellido = lastName.value;
 
