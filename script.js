@@ -87,6 +87,9 @@ btn.addEventListener("click", () => {
             titulosRow.classList.remove("hidden");
         
             btnEditar.addEventListener("click", () => {
+                // if (nombre != "" && apellido != "" && edad != null && grupo != "Elegir grupo" && grupo != "") {
+
+                // }
                 names.value = nombre;
                 lastName.value = apellido;
                 age.value = edad;
