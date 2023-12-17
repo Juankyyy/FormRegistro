@@ -27,12 +27,22 @@ html {
 table {
     border-collapse: collapse;
     border: 2px solid #d1d1d1;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 td, th {
     position: relative;
     text-align: center;
     padding: 10px;
+}
+
+td {
+    background-color: #333;
+}
+
+th {
+    background-color: #111;
 }
 
 select {
