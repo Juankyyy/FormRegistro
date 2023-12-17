@@ -4,7 +4,6 @@ const age = document.querySelector("#age");
 const group = document.querySelector("#group");
 
 const btn = document.querySelector(".btnInicio");
-
 const divTable = document.querySelector("#divTable");
 const table = document.createElement("table");
 table.setAttribute("border", "1")
@@ -41,22 +40,7 @@ btn.addEventListener("click", () => {
     
     if (nombre != "" && apellido != "" && edad != null && grupo != "Elegir grupo" && grupo != "") {
         if (edad >= 0 && edad <= 115) {
-
-            if (edad >= 0 && edad <= 5) {
-                grupoEtario = "Bebé";
-            } else if (edad >= 6 && edad <= 11) {
-                grupoEtario = "Niñx";
-            } else if (edad >= 12 && edad <= 18) {
-                grupoEtario = "Adolescente";
-            } else if (edad >= 19 && edad <= 26) {
-                grupoEtario = "Joven";
-            } else if (edad >= 27 && edad <= 59) {
-                grupoEtario = "Adulto";
-            } else if (edad >= 60 && edad <= 99) {
-                grupoEtario = "Adulto Mayor";
-            } else if (edad >= 100 && edad <= 115) {
-                grupoEtario = "Con un pie en la tumba";
-            };
+            asignarGrupoEtario(edad)
             
             const info = [nombre, apellido, edad, grupoEtario, grupo, btnEditar, btnEliminar];
             const infoRow = document.createElement("tr");
@@ -72,16 +56,8 @@ btn.addEventListener("click", () => {
                     infoRow.appendChild(td);
                 }
             })
-    
-            if (grupo == "Jobs") {
-                infoRow.style = "background-color: #c93232"
-            } else if (grupo == "Ritchie") {
-                infoRow.style = "background-color: #00a7d1"
-            }  else if (grupo == "Lovelace") {
-                infoRow.style = "background-color: #790097"
-            }  else if (grupo == "Tesla") {
-                infoRow.style = "background-color: #439600"
-            }
+
+            asignarColor(grupo, infoRow);
     
             table.appendChild(infoRow);
             titulosRow.classList.remove("hidden");
@@ -125,6 +101,36 @@ btn.addEventListener("click", () => {
     divTable.appendChild(table);
 });
 
+
+function asignarGrupoEtario(edad) {
+    if (edad >= 0 && edad <= 5) {
+        grupoEtario = "Bebé";
+    } else if (edad >= 6 && edad <= 11) {
+        grupoEtario = "Niñx";
+    } else if (edad >= 12 && edad <= 18) {
+        grupoEtario = "Adolescente";
+    } else if (edad >= 19 && edad <= 26) {
+        grupoEtario = "Joven";
+    } else if (edad >= 27 && edad <= 59) {
+        grupoEtario = "Adulto";
+    } else if (edad >= 60 && edad <= 99) {
+        grupoEtario = "Adulto Mayor";
+    } else if (edad >= 100 && edad <= 115) {
+        grupoEtario = "Con un pie en la tumba";
+    };
+}
+
+function asignarColor(grupo, infoRow) {
+    if (grupo == "Jobs") {
+        infoRow.style = "background-color: #c93232"
+    } else if (grupo == "Ritchie") {
+        infoRow.style = "background-color: #00a7d1"
+    }  else if (grupo == "Lovelace") {
+        infoRow.style = "background-color: #790097"
+    }  else if (grupo == "Tesla") {
+        infoRow.style = "background-color: #439600"
+    }
+}
 
 function clearInputs() {
     const inputs = [names, lastName, age, group];
